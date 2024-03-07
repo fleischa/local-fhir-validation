@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Firely.Fhir.Packages" Version="4.4.0"/>
+        <PackageReference Include="Firely.Fhir.Validation.R4" Version="2.1.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="examples\0428d416-149e-48a4-977c-394887b3d85c.xml">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Gradient.Fhir.Validation.R4\Gradient.Fhir.Validation.R4.csproj" />
+    </ItemGroup>
+
+</Project>
